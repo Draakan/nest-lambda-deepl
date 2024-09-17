@@ -21,9 +21,6 @@ functions:
       - httpApi:
           method: ANY
           path: /
-      - httpApi:
-          method: ANY
-          path: '{proxy+}'
 
 package:
   patterns:
