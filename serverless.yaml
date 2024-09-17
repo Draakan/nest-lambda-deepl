@@ -19,7 +19,10 @@ functions:
     handler: slsdist/index.handler
     events:
       - httpApi:
-          method: ANY
+          method: POST
+          path: /translate-pairs
+      - httpApi:
+          method: GET
           path: /translate-pairs
 
 package:
