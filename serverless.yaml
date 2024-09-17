@@ -19,8 +19,8 @@ functions:
     handler: slsdist/index.handler
     events:
       - httpApi:
-          method: ANY
-          path: /
+          method: post
+          path: /translate-pairs
 
 package:
   patterns:
