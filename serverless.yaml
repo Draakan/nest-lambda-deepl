@@ -18,10 +18,10 @@ functions:
   main:
     handler: slsdist/index.handler
     events:
-      - http:
+      - httpApi:
           method: ANY
           path: /
-      - http:
+      - httpApi:
           method: ANY
           path: '{proxy+}'
 
