@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { CreateTranslatePairRequest } from './dto/request/create-translate-pair.dto';
 import { TranslatePairResponse } from './dto/response/translate-pair.dto';
 import { TranslatePairService } from './translate-pair.service';
@@ -12,6 +12,11 @@ export class TranslatePairController {
     @Body() createTranslatePairRequest: CreateTranslatePairRequest,
   ): Promise<TranslatePairResponse> {
     return this.translatePairService.createTranslatePair(createTranslatePairRequest);
+  }
+
+  @Get()
+  async getAllTranslatePairs(): Promise<TranslatePairResponse[]> {
+    return this.translatePairService.getAllTranslatePairs();
   }
 
 }

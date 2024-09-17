@@ -19,6 +19,12 @@ export class TranslatePairService {
     return this.buildResponse(newTranslatePair);
   }
 
+  async getAllTranslatePairs(): Promise<TranslatePairResponse[]> {
+    const allTranslatePairs = await this.translatePairRepository.findAll();
+
+    return allTranslatePairs.map(this.buildResponse);
+  }
+
   private buildResponse(pair: TranslatePair): TranslatePairResponse {
     return {
       _id: pair._id as string,

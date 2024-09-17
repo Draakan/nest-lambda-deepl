@@ -19,4 +19,8 @@ export class TranslatePairRepository {
   async findOneById(id: string): Promise<TranslatePair> {
     return this.translatePair.findById(id);
   }
+
+  async findAll(): Promise<TranslatePair[]> {
+    return this.translatePair.find();
+  }
 }
